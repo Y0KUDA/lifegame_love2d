@@ -64,7 +64,7 @@ banner2.isHit=o_utils.collision_sq(
 function redsky()
   R,G,B=acid.raibow()
   Ramp=16;Rbias=239;Gamp=40;Gbias=80;Bamp=16;Bbias=19
-  return R*Ramp/255+Rbias,G*Gamp/255+Gbias,B*Bamp/255+Bbias
+  return (R*Ramp+Rbias)/255,(G*Gamp+Gbias)/255,(B*Bamp+Bbias)/255
 end
 banner2.show=function(x,y)
    if banner2.isHit(x,y) then

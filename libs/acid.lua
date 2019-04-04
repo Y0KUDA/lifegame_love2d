@@ -6,7 +6,7 @@ function new_acid()
   function ret.raibow(...)
     i=...
     if(i == nil)then i=0 else i=... end
-    return (math.sin((ctr+i)/31)+1)*127,(math.sin((ctr+i)/51)+1)*127,(math.sin((ctr+i)/41)+1)*127
+    return (math.sin((ctr+i)/31)+1)*127/255,(math.sin((ctr+i)/51)+1)*127/255,(math.sin((ctr+i)/41)+1)*127/255
   end
   function ret.update()
     ctr=ctr+1
@@ -14,14 +14,14 @@ function new_acid()
   function ret.print(str,x,y,...)
     love.graphics.setColor(ret.raibow())
     love.graphics.print(str, x+3,y+3,...)
-    love.graphics.setColor(255,255,255)
+    love.graphics.setColor(1,1,1)
     love.graphics.print(str, x+(math.sin(ctr/17)-0.8)*2,y+(math.sin(ctr/17)-0.8)*2,...)
   end
 
   function ret.printf(str,x,y,...)
     love.graphics.setColor(ret.raibow())
     love.graphics.printf(str, x+3,y+3,...)
-    love.graphics.setColor(255,255,255)
+    love.graphics.setColor(1,1,1)
     love.graphics.printf(str,x+math.sin(ctr/17)+1,y+math.sin(ctr/17)+1,...)
   end
 
@@ -42,7 +42,7 @@ function new_acid()
       --love.graphics.setColor(R,G,B,10)
       love.graphics.print(str,x+vectorX*i*distance,y+vectorY*i*distance,math.sin(sway)*amp+(r or 0),1,1,centerX,centerY)
     end
-    --love.graphics.setColor(255,255,255)
+    --love.graphics.setColor(1,1,1)
     --love.graphics.print(str,x+vectorX*layer*distance,y+vectorY*layer*distance,math.sin(sway)*amp,1,1,centerX,centerY)
   end
 

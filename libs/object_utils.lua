@@ -58,7 +58,7 @@ function new_object_utils()
 
   function ret.collision_sq(x1,x2,y1,y2)
     return function(x,y)
-      --love.graphics.setColor(255,0,0,100)  ---visualize collisions
+      --love.graphics.setColor(1,0,0,1)  ---visualize collisions
       --love.graphics.rectangle('fill',x1,y1,x2-x1,y2-y1) ---
       return x>=x1 and x<=x2 and y>=y1 and y<=y2
     end
