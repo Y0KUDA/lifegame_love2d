@@ -44,9 +44,9 @@ banner=o_utils.new_obj()
 banner.isVisible=true
 banner.show=function(x,y)
    love.graphics.setFont(font4banner2)
-   acid.banner("Welcome to ようこそ                ",400,130)
+   acid.banner("test project                ",400,130)
    love.graphics.setFont(font4banner1)
-   acid.banner("じゃぱりぱーく",400,190)
+   acid.banner("LIFE GAME IN LOVE2D",400,190)
 end
 
 
